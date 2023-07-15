@@ -14,7 +14,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: nginx
-  name: nginx
+  name: nginx		
 spec:
   containers:
   - image: nginx
