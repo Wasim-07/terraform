@@ -1,0 +1,18 @@
+controlplane ~ ✖ kubectl exec postgres -- env
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/15/bin
+HOSTNAME=postgres
+GOSU_VERSION=1.16
+LANG=en_US.utf8
+PG_MAJOR=15
+PG_VERSION=15.3-1.pgdg120+1
+PGDATA=/var/lib/postgresql/data
+POSTGRES_PASSWORD=mysecretpassword
+KUBERNETES_PORT_443_TCP_PROTO=tcp
+KUBERNETES_PORT_443_TCP_PORT=443
+KUBERNETES_PORT_443_TCP_ADDR=10.43.0.1
+KUBERNETES_SERVICE_HOST=10.43.0.1
+KUBERNETES_SERVICE_PORT=443
+KUBERNETES_SERVICE_PORT_HTTPS=443
+KUBERNETES_PORT=tcp://10.43.0.1:443
+KUBERNETES_PORT_443_TCP=tcp://10.43.0.1:443
+HOME=/root

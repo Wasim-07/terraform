@@ -1,0 +1,42 @@
+# terraform
+kubectl run nginx --image=nginx --dry-run -o yaml
+kubectl run nginx --image=nginx --dry-run -o yaml > firstpod.yaml
+vi firstpod.yaml
+kubectl create -f firstpod.yaml
+
+
+Note:
+#kubectl run nginx --image=nginx --dry-run -o yaml
+W0715 04:47:06.843755   17705 helpers.go:692] --dry-run is deprecated and can be replaced with --dry-run=client.
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
+
+
+Some other Informative commands:
+
+#kubectl explain pod
+#kubectl explain pod --recursive | less
+#kubectl run nginx --image=nginx
+#kubectl describe po newpods-7rm5b | less
+#kubectl get po -o wide
+#kubectl delete po webapp
+#kubectl run redis --image=redis:alpine --dry-run=client -o yaml > redis-pod.yaml
+#kubectl run redis -l tier=db --image=redis:alpine
+#kubectl expose pod redis --port=6379 --name redis-service
+#kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3
+#kubectl run custom-nginx --image=nginx --port=8080
+#kubectl create deployment redis-deploy --image=redis --replicas=2 -n dev-ns
+#kubectl run httpd --image=httpd:alpine --port=80 --expose

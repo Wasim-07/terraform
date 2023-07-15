@@ -1,0 +1,9 @@
+#kubectl get rs
+#kubectl describe rs new-replica-set | less
+#kubectl explain rs --recursive | less
+#kubectl delete rs replicaset-1 replicaset-2
+#kubectl edit rs new-replica-set
+#kubectl get rs new-replica-set -o yaml > new-replica-set
+#kubectl delete rs new-replica-set
+#kubectl create  -f new-replica-set
+#kubectl scale rs new-replica-set --replicas=5
