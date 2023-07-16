@@ -1,0 +1,28 @@
+#kubectl get service
+#
+#
+#Below is the default service created by K8S at launch - 
+#       NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+	kubernetes   ClusterIP   10.43.0.1    <none>        443/TCP   12m
+
+#kubectl describe service kubernetes
+#kubectl get service kubernetes --show-labels
+#
+#
+#Sample - 
+#apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+  namespace: default
+spec:
+  ports:
+  - nodePort: 30080
+    port: 8080
+    targetPort: 8080
+  selector:
+    name: simple-webapp
+  type: NodePort
+
+
+#kubectl create -f service-definition-1.yaml   
